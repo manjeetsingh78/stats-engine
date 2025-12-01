@@ -1,13 +1,17 @@
-import fs from "fs";
+const fs = require("fs");
 
 const svg = `
-<svg width="600" height="140" xmlns="http://www.w3.org/2000/svg">
-  <style>.t{font:16px sans-serif;fill:#fff}</style>
-  <rect width="600" height="140" rx="18" fill="#0d1117"/>
-  <text x="40" y="50" class="t">🏆 Open Source Contributor</text>
-  <text x="40" y="90" class="t">🔥 Active Developer</text>
-  <text x="40" y="130" class="t">🚀 DevOps Engineer</text>
+<svg width="600" height="150" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .t { font: 16px sans-serif; fill: #c9d1d9 }
+    .h { font: 20px sans-serif; fill: #f0db4f }
+  </style>
+  <rect width="600" height="150" rx="16" fill="#0d1117" />
+  <text x="30" y="50" class="h">🏆 GitHub Trophies</text>
+  <text x="30" y="85" class="t">🔥 Active Open Source Developer</text>
+  <text x="30" y="115" class="t">🚀 DevOps & Full Stack Engineer</text>
 </svg>
 `;
 
+fs.mkdirSync("api", { recursive: true });
 fs.writeFileSync("api/trophy.svg", svg);
