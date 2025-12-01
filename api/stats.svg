@@ -1,0 +1,13 @@
+
+<svg width="420" height="160" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .t { font: 14px sans-serif; fill: #c9d1d9 }
+    .h { font: 18px sans-serif; fill: #58a6ff }
+  </style>
+  <rect width="420" height="160" rx="14" fill="#0d1117" />
+  <text x="20" y="35" class="h">GitHub Stats</text>
+  <text x="20" y="65" class="t">👤 User: manjeetsingh78</text>
+  <text x="20" y="90" class="t">📦 Public Repos: 44</text>
+  <text x="20" y="115" class="t">👥 Followers: 1</text>
+  <text x="20" y="140" class="t">⏱ Updated: 12/1/2025, 6:24:38 PM</text>
+</svg>
