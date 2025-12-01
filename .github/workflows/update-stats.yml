@@ -1,5 +1,8 @@
 name: Update Profile Stats
 
+permissions:
+  contents: write
+
 on:
   push:
   schedule:
@@ -30,5 +33,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add .
-          git commit -m "Auto update stats" || echo "No changes"
+          git commit -m "Auto update profile assets" || echo "No changes"
           git push
