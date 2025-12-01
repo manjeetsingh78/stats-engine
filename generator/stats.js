@@ -14,8 +14,8 @@ const headers = {
 };
 
 async function run() {
-  const user = await fetch(urls.stats, { headers }).then(res => res.json());
-  const repos = await fetch(urls.repos, { headers }).then(res => res.json());
+  const userRes = await fetch(urls.stats, { headers });
+  const user = await userRes.json();
 
   const svg = `
 <svg width="420" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -35,4 +35,7 @@ async function run() {
   fs.writeFileSync("api/stats.svg", svg);
 }
 
-run().catch(console.error);
+run().catch(err => {
+  console.error(err);
+  process.exit(1);
+});
